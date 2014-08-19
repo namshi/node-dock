@@ -12,7 +12,7 @@ npm install -g node-dock
 
 ### Usage
 
-#### List Your Containers
+#### List your Containers
 
 ```bash
 dock list
