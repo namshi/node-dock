@@ -4,27 +4,27 @@ Docker commands without IDS
 
 =
 
-=== Install
+### Install
 
 ```bash
 npm install -g node-dock
 ```
 
-=== Usage
+### Usage
 
-==== List Your Containers
+#### List Your Containers
 
 ```bash
 dock list
 ```
 
-==== Clean all inactive Containers
+#### Clean all inactive Containers
 
 ```bash
 dock clean
 ```
 
-==== Run a docker command on a container by image name
+#### Run a docker command on a container by image name
 
 ```
 dock <command> <command's args> --image <image name>
