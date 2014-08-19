@@ -1,0 +1,24 @@
+{
+  "name": "node-dock",
+  "version": "0.0.0",
+  "description": "Handy interface for docker shell command",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/namshi/node-dock.git"
+  },
+  "keywords": [
+    "docker",
+    "command",
+    "dock"
+  ],
+  "author": "hossam-fares <hossamfawzallah@hotmail.com>, unLucio <unlucio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/namshi/node-dock/issues"
+  },
+  "homepage": "https://github.com/namshi/node-dock"
+}
