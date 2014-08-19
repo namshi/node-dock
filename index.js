@@ -9,10 +9,6 @@ var yargs = require('yargs').argv;
 var dockerProcess = child.spawn('docker', ['ps', '-a']);
 var shellOutput= '';
 
-dockerProcess.stdout.on('data', function(chunk) {
-    shellOutput += chunk;
-});
-
 function runCommandOnContaniner(contanerId, commandArguments) {
     var data = '';
 
@@ -24,12 +20,7 @@ function runCommandOnContaniner(contanerId, commandArguments) {
 
     commandOutput.on('data', function(chunk) {
         console.log(chunk.toString());
-        //data += chunk.toString();
     });
-
-    /*commandOutput.on('end', function(){
-        console.log(data + '\n');
-    });*/
 }
 
 function yargsToArgs(yArgs) {
@@ -46,6 +37,10 @@ function yargsToArgs(yArgs) {
 
     return args;
 }
+
+dockerProcess.stdout.on('data', function(chunk) {
+    shellOutput += chunk;
+});
 
 dockerProcess.stdout.on('end', function() {
     var parsedTable = tableParser(shellOutput);
