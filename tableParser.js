@@ -35,5 +35,7 @@ module.exports = function parse(output) {
         }
     });
 
+    (table[table.length] === undefined) && table.pop();
+
     return table;
 };
