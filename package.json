@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/namshi/node-dock/issues"
   },
-  "homepage": "https://github.com/namshi/node-dock"
+  "homepage": "https://github.com/namshi/node-dock",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "table-parser": "0.0.3",
+    "yargs": "^1.3.1"
+  }
 }
