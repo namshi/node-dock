@@ -10,8 +10,6 @@ var dockerProcess = child.spawn('docker', ['ps', '-a']);
 var shellOutput= '';
 
 function runCommandOnContaniner(contanerId, commandArguments) {
-    var data = '';
-
     commandArguments.push(contanerId);
 
     console.log('running '+commandArguments.join(' ')+' on container '+contanerId);
@@ -44,9 +42,10 @@ dockerProcess.stdout.on('data', function(chunk) {
 
 dockerProcess.stdout.on('end', function() {
     var parsedTable = tableParser(shellOutput);
+    var index = 0;
 
     if(yargs._.indexOf('list') !== -1) {
-        for(var index in parsedTable){
+        for(index in parsedTable){
             console.log('image name: ' + parsedTable[index].IMAGE + ' (id: '+parsedTable[index]['CONTAINER ID']+')');
         }
 
@@ -54,7 +53,7 @@ dockerProcess.stdout.on('end', function() {
     }
 
     if(yargs._.indexOf('clean') !== -1) {
-        for(var index in parsedTable){
+        for(index in parsedTable){
             if (parsedTable[index].STATUS.indexOf('Up') < 0) {
                 runCommandOnContaniner(parsedTable[index]['CONTAINER ID'], ['rm']);
             }
@@ -70,7 +69,7 @@ dockerProcess.stdout.on('end', function() {
 
         var filteredTable = _.filter(parsedTable, {IMAGE: yargs.image});
 
-        for(var index in filteredTable){
+        for(index in filteredTable){
             runCommandOnContaniner(filteredTable[index]['CONTAINER ID'], yargsToArgs(yargs));
         }
     }

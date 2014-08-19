@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "bin": {
+    "dock": "bin/dock.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/namshi/node-dock.git"
