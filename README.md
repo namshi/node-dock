@@ -25,12 +25,19 @@ dock list
 
 #### Clean
 
-And cleanup all your inactive ones:
+Cleanup all your inactive ones:
 
 ```bash
 dock clean
 ```
 
+#### Clean Images
+
+And cleanup all your un-tagged images:
+
+```bash
+dock clean images
+```
 
 #### Run a docker command on a container by image name
 
