@@ -9,7 +9,7 @@ var yargs = require('yargs').argv;
 var dockerProcess = child.spawn('docker', ['ps', '-a']);
 var shellOutput= '';
 
-function runCommandOnContaniner(contanerId, commandArguments) {
+function runCommandOnContainer(contanerId, commandArguments) {
     commandArguments.push(contanerId);
 
     console.log('running '+commandArguments.join(' ')+' on container '+contanerId);
@@ -55,7 +55,7 @@ dockerProcess.stdout.on('end', function() {
     if(yargs._.indexOf('clean') !== -1) {
         for(index in parsedTable){
             if (parsedTable[index].STATUS.indexOf('Up') < 0) {
-                runCommandOnContaniner(parsedTable[index]['CONTAINER ID'], ['rm']);
+                runCommandOnContainer(parsedTable[index]['CONTAINER ID'], ['rm']);
             }
         }
 
@@ -70,7 +70,7 @@ dockerProcess.stdout.on('end', function() {
         var filteredTable = _.filter(parsedTable, {IMAGE: yargs.image});
 
         for(index in filteredTable){
-            runCommandOnContaniner(filteredTable[index]['CONTAINER ID'], yargsToArgs(yargs));
+            runCommandOnContainer(filteredTable[index]['CONTAINER ID'], yargsToArgs(yargs));
         }
     }
 
