@@ -3,7 +3,7 @@
 Node dock is an handy command that plugs on top of your usual [docker](https://www.docker.com/) commands adding some sugar and some handy function on top of it.
 
 
-### Install
+## Install
 
 You can install this library through [NPM](https://www.npmjs.org/package/node-dock):
 
@@ -11,7 +11,7 @@ You can install this library through [NPM](https://www.npmjs.org/package/node-do
 npm install -g node-dock
 ```
 
-### Usage
+## Usage
 
 Dock comes with 2 handy commands on top of the usual ones:
 
