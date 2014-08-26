@@ -21,8 +21,14 @@ function listProcesses(callback) {
 }
 
 listProcesses(function(parsedTable) {
+  yargs.image = yargs.i || process.argv[(process.argv.length-1)];
+
+  if (yargs.i) {
+    delete yargs.i;
+  }
+
   if(yargs._.indexOf('list') !== -1) {
-    imagesList(parsedTable);
+    imagesList(parsedTable, yargs);
     return;
   }
 
