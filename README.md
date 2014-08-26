@@ -1,4 +1,4 @@
-#Node-Dock, just like docker, but without needing the Ids.
+#Node-Dock: docker command, without needing Ids.
 
 Node dock is an handy command that plugs on top of your usual [docker](https://www.docker.com/) commands adding some sugar and some handy function on top of it.
 
