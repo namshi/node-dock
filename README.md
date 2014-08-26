@@ -15,7 +15,7 @@ This:
 ```
 ~  ᐅ docker ps
 CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS              PORTS                    NAMES
-b844c6472721        odino/odino.github.com:latest   "/bin/sh -c 'export    3 seconds ago       Up 3 seconds        0.0.0.0:4000->4000/tcp   sharp_elion         
+b844c6472721        tutum/mysql:latest   "/bin/sh -c 'export    3 seconds ago       Up 3 seconds        0.0.0.0:4000->4000/tcp   sharp_elion         
 ~  ᐅ docker stop b844c6472721
 b844c6472721
 ```
@@ -23,8 +23,8 @@ b844c6472721
 becomes this:
 
 ```
-~  ᐅ dock stop odino/odino.github.com
-running stop odino/odino.github.com d1ac1f9a916d on container d1ac1f9a916d
+~  ᐅ dock stop tutum/mysql
+running stop tutum/mysql d1ac1f9a916d on container d1ac1f9a916d
 d1ac1f9a916d
 ```
 
@@ -50,7 +50,7 @@ Get the list of all your current containers:
 ``` bash
 ~  ᐅ dock list
 Image name: namshi/nginx-proxy:latest (id: 3563cd490f63)
-Image name: odino/odino.github.com:latest (id: d1ac1f9a916d)
+Image name: tutum/mysql:latest (id: d1ac1f9a916d)
 
 ```
 
@@ -84,7 +84,15 @@ running rmi 533f6ceea42d on container 533f6ceea42d
 running rmi 54b14e4b8f1a on container 54b14e4b8f1a
 ```
 
-#### Run a docker command on a container by image name
+### Run a docker command on a container, by image name
+
+How many times you've dreamt of:
+
+```
+docker logs -f tutum/mysql
+```
+
+...now it's possible!
 
 Whenever you create and run your new container you always know the
 image's name, but the id can be rather annoying to get every time.
