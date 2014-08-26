@@ -1,8 +1,10 @@
 <img align="right" width="250px" src="https://raw.githubusercontent.com/namshi/node-dock/master/bin/images/logo.jpg?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6bmFtc2hpL25vZGUtZG9jay9tYXN0ZXIvYmluL2ltYWdlcy9sb2dvLmpwZyIsImV4cGlyZXMiOjE0MDk2NTkwNDh9--e1ed3b45e0a32d0dfc91095bbc0cc320f23302a4" />
 
-# Node-Dock: docker command, without needing Ids.
+# Dock
 
-Node dock is an handy command that plugs on top of your usual
+> Your sweet remedy for all your docker problems
+
+Dock is an handy command that plugs on top of your usual
 [docker](https://www.docker.com/) commands adding some sugar
 and some handy function on top of it.
 
