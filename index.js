@@ -2,7 +2,7 @@
 
 var child = require('child_process');
 var yargs = require('yargs').argv;
-var tableParser = require('./lib/tableParser');
+var tableParser = require('node-shell-parser');
 var commandProxy = require('./lib/commandProxy');
 var imagesList = require('./lib/commands/list');
 var cleanImages = require('./lib/commands/clean');
@@ -16,7 +16,7 @@ function listProcesses(callback) {
   });
 
   dockerProcess.stdout.on('end', function () {
-    callback(tableParser(shellOutput));
+    callback(tableParser(shellOutput, {separator: '        '}));
   });
 }
 
