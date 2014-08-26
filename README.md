@@ -41,7 +41,7 @@ dock clean images
 
 #### Run a docker command on a container by image name
 
-Whenever you create and run you new container you always know the image's name, but the id can be rather annoying to get every time.
+Whenever you create and run your new container you always know the image's name, but the id can be rather annoying to get every time.
 Just add a `--image || -i <name>`, or your image name as last argument, in your usual `docker` command and `dock` will figure out what to do for you :)
 
 ```bash
