@@ -2,7 +2,7 @@
 
 # Dock
 
-> Your sweet remedy for all your docker problems
+> A sweet remedy for all your docker problems
 
 Dock is an handy command that plugs on top of your usual
 [docker](https://www.docker.com/) commands adding some sugar
