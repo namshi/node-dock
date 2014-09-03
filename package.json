@@ -1,6 +1,6 @@
 {
   "name": "node-dock",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Handy interface for docker shell command",
   "main": "index.js",
   "scripts": {
